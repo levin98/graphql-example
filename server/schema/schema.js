@@ -15,8 +15,8 @@ let books = [
     { name: "Reigns of Chaos", genre: 'Fantasy', id: '1', authorId: '2' },
     { name: "Frozen Throne", genre: 'Fantasy', id: '2', authorId: '3' },
     { name: "The Strangers Things", genre: 'Horror', id: '3', authorId: '1' },
-    { name: "Frozen Throne II", genre: 'Fantasy', id: '2', authorId: '3' },
-    { name: "The Strangers Things II", genre: 'Horror', id: '3', authorId: '1' }
+    { name: "Frozen Throne II", genre: 'Fantasy', id: '4', authorId: '3' },
+    { name: "The Strangers Things II", genre: 'Horror', id: '5', authorId: '1' }
 ]
 
 let authors = [
