@@ -1,5 +1,5 @@
 const graphql = require('graphql')
-const lodash = require('lodash')
+const _ = require('lodash')
 
 const { GraphQLObjectType, GraphQLString, GraphQLSchema } = graphql
 
