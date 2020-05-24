@@ -7,21 +7,28 @@ const getBooksQuery = gql`
     books {
         name
         id
+        genre
     }
 }
 `
 
 class BookList extends Component {
-  render() {
-      console.log(this.props)
-    return (
-      <div>
-          <ul id="book-list">
-              <li>Book Name</li>
-          </ul>
-      </div>
-    );
-  }
+
+    displayBooks() {
+        let data = this.props.data;
+        return data.loading ? (<div>Loading books...</div>) : data.books.map(book => <li key={ book.id }>{`${ book.name } ${ book.genre }`}</li>)
+    }
+
+    render() {
+        console.log(this.props)
+        return (
+            <div>
+                <ul id="book-list">
+                    { this.displayBooks() }
+                </ul>
+            </div>
+        );
+    }
 }
 
 export default graphql(getBooksQuery)(BookList);
