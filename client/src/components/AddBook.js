@@ -14,13 +14,19 @@ class AddBook extends Component {
     }
 
     displayAuthors() {
-        let data = this.props.data;
+        let data = this.props.getAuthorsQuery;
         return data.loading ? (<option disabled>Loading authors...</option>) : data.authors.map(author => <option key={ author.id } value={ author.id }>{ author.name }</option>)
     }
 
     submitForm(e) {
         e.preventDefault()
-        console.log(this.state)
+        this.props.addBookMutation({
+            variables: {
+                name: this.state.name,
+                genre: this.state.genre,
+                authorId: this.state.authorId
+            }
+        })
     }
 
     render() {
