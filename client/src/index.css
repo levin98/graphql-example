@@ -1,9 +1,4 @@
 body {
   background: #eee;
-  font-family: 'Nunito SemiBold';
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: "Courier New", Courier, monospace;
 }
